@@ -15,6 +15,7 @@ gulp.task('server', function() {
 gulp.task('js', function() {
   return gulp.src([
     './src/js/barfiller.js',
+    './src/js/scrollit.js',
     './src/js/main.js'
   ])
     .pipe(plugins.sourcemaps.init())

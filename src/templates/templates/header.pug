@@ -1,4 +1,4 @@
-header.header
+header.header(data-scroll-index="0")
   .header__topbar
     .container
       .header__wrapper
@@ -8,15 +8,15 @@ header.header
         .menu
           ul.menu__wrapper
             li.menu__item
-              a.menu__link.menu__link--active(href="#") HOME
+              a.menu__link.menu__link--active(href="#" data-scroll-nav="0") HOME
             li.menu__item
-              a.menu__link(href="#") WHAT I DO
+              a.menu__link(href="#" data-scroll-nav="1") WHAT I DO
             li.menu__item
-              a.menu__link(href="#") ABOUT ME
+              a.menu__link(href="#" data-scroll-nav="2") ABOUT ME
             li.menu__item
-              a.menu__link(href="#") PORTFOLIO
+              a.menu__link(href="#" data-scroll-nav="3") PORTFOLIO
             li.menu__item
-              a.menu__link(href="#") CONTACT
+              a.menu__link(href="#" data-scroll-nav="4") CONTACT
   .container
     .header__content
       .header__text
@@ -24,7 +24,7 @@ header.header
         h1.header__title I'M A WEB-DEVELOPER
         p.header__desc I'm a Web Developer with extensive experience for over 3 years. My expertise is to create and design Websites, Apps, Mockups and many more...
         .header__btns
-          a(href="#").header__contact CONTACT ME
-          a(href="#").header__work MY WORK
-    a.scroll
+          a(href="#" data-scroll-nav="4").header__contact CONTACT ME
+          a(href="#" data-scroll-nav="3").header__work MY WORK
+    a(href="#" data-scroll-nav="1").scroll
     

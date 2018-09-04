@@ -1,4 +1,29 @@
 (function() {
+  // SCROLLIT
+  $.scrollIt({
+    upKey: 38, // key code to navigate to the next section
+    downKey: 40, // key code to navigate to the previous section
+    easing: "swing", // the easing function for animation
+    scrollTime: 1000, // how long (in ms) the animation takes
+    activeClass: "menu__link--active", // class given to the active nav element
+    onPageChange: null, // function(pageIndex) that is called when page is changed
+    topOffset: -25 // offste (in px) for fixed top navigation
+  });
+
+
+  // NAVIGATION SCRIPT
+
+  $(window).on("scroll", function() {
+    var bodyScroll = $(window).scrollTop(),
+      navbar = $(".header__topbar");
+    if (bodyScroll > 300) {
+      navbar.addClass("header__fixed-top");
+    } else {
+      navbar.removeClass("header__fixed-top");
+    }
+  });
+
+
   // SVG SUPPORT FOR IE8+
   svg4everybody();
 

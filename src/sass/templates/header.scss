@@ -9,7 +9,16 @@
   height: 100vh;
 
   &__topbar {
-    padding: 40px 0;
+    width: 100%;
+    padding: 20px 0;
+    transition: all 0.5s ease;
+  }
+
+  &__fixed-top {
+    position: fixed;
+    z-index: 999;
+    background-color: $main-light;
+    box-shadow: 0px 0px 18px 1px rgba(0, 0, 0, 0.1);
   }
 
   &__wrapper {
@@ -18,7 +27,7 @@
     align-items: center;
     justify-content: space-between;
   }
-
+  
   &__content {
     color: $main;
     text-align: center;
@@ -141,13 +150,13 @@
     text-decoration: none;
     font-size: $font-size;
     color: $main;
-    transition: color 0.3s;
+    transition: all 0.3s;
 
     &:hover {
       color: lighten($color: $main, $amount: 20%);
     }
-
-    &--active:after {
+    &:after {
+      transition: all 0.3s;
       position: absolute;
       content: "";
       display: block;
@@ -155,7 +164,33 @@
       height: 2px;
       background: $main-dark;
       transition: width 0.3s;
-      width: 50%;
+      width: 0;
+    }
+
+    &--active:after {
+      transition: all 0.3s;
+      position: absolute;
+      content: "";
+      display: block;
+      top: 20px;
+      left: 0;
+
+      height: 2px;
+      background: $main-dark;
+      transition: width 0.3s;
+      width: 30px;
+      &:active {
+        outline: none;
+        border: none;
+      }
+    }
+    &:active {
+      outline: none;
+      border: none;
+    }
+    &:focus {
+      outline: none;
+      border: none;
     }
   }
 }
