@@ -2,7 +2,10 @@
 @import 'global/functions';
 @import 'global/mixins';
 @import 'global/variables';
+@import 'global/plugins';
 @import 'global/base';
 
+
 @import 'templates/header';
-@import 'templates/services'
+@import 'templates/services';
+@import 'templates/about';

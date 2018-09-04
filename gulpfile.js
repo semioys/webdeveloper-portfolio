@@ -14,6 +14,7 @@ gulp.task('server', function() {
 
 gulp.task('js', function() {
   return gulp.src([
+    './src/js/barfiller.js',
     './src/js/main.js'
   ])
     .pipe(plugins.sourcemaps.init())
@@ -32,6 +33,7 @@ gulp.task('js', function() {
 gulp.task('js:libs', function() {
   return gulp.src([
     './node_modules/svg4everybody/dist/svg4everybody.legacy.min.js',
+    './node_modules/jquery/dist/jquery.js' 
   ])
     .pipe(plugins.concat('main.min.libs.js'))
     .pipe(gulp.dest('./build/js'))
