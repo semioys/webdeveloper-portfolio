@@ -1,5 +1,7 @@
 .portfolio {
   padding: 100px 0;
+  color: $main;
+
 
   &__text {
     text-align: center;
@@ -33,7 +35,7 @@
     &:hover {
       .portfolio__overlay {
         display: block;
-        background: rgba(0, 0, 0, .8);
+        background: rgba(0, 0, 0, .9);
       }
       .portfolio__info {
         opacity: 1;

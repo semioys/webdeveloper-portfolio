@@ -1,0 +1,31 @@
+section.contact
+  .container
+    .contact__inner
+      h2.contact__title CONTACT ME
+      p.contact__desc Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+      .contact__list
+        .contact__item
+          +icon('location','contact__icon')
+          .contact__text
+            p.contact__text__title ADDRESS
+            a.contact__text__link(href="https://goo.gl/maps/6iuQF5z83jt" target="_blank").contact__text__desc Zhytomir, Ukraine
+        .contact__item
+          +icon('phone','contact__icon')
+          .contact__text
+            p.contact__text__title PHONE
+            a.contact__text__link(href="tel:+380634583952").contact__text__desc +38 (063) 458 39 52
+        .contact__item
+          +icon('mail','contact__icon')
+          .contact__text
+            p.contact__text__title MAIL
+            a.contact__text__link(href="mailto:semioys@gmail.com").contact__text__desc semioys@gmail.com
+    form.contact__form(action="#")
+      .contact__form-group.contact__form-group--half
+        input.contact__input(type="text", name="name", placeholder="NAME").contact__name
+      .contact__form-group.contact__form-group--half
+        input.contact__input(type="email", name="email", placeholder="EMAIL").contact__email
+      .contact__form-group
+        textarea.contact__input(name="textarea", cols="30", rows="10", placeholder="MESSAGE")
+      .contact__button
+        button.contact__input.contact__submit(type="submit") SEND
+        

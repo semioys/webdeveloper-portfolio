@@ -1,0 +1,130 @@
+.contact {
+  padding: 100px 0;
+  background-color: $main-more-lighter;
+  color: $main;
+
+  &__inner {
+    text-align: center;
+    margin-bottom: 70px;
+  }
+
+  &__title {
+    margin: 0;
+    font-size: $font-size--h2;
+    font-weight: 800;
+    margin-bottom: 25px;
+  }
+
+  &__desc {
+    color: $main-lighter;
+    margin: 0;
+    font-size: $font-size--big;
+    margin-bottom: 70px;
+  }
+
+  &__icon {
+    width: 36px;
+    height: 36px;
+    fill: $primary
+  }
+
+  &__list {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    max-width: 810px;
+    margin: 0 auto;
+  }
+
+  &__item {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__text {
+    color: $main-lighter;
+    font-size: $font-size--small;
+    text-align: left;
+    margin-left: 30px;
+
+    &__title {
+      margin: 0;
+      font-weight: 700;
+    }
+
+    &__link {
+      text-decoration: none;
+      color: $main-lighter;
+
+      &:hover {
+        color: lighten($color: $main-lighter, $amount: 20%);
+      }
+    }
+  }
+
+  &__form {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+
+  &__form-group {
+    width: 100%;
+    margin-bottom: 50px;
+
+    &--half {
+      width: 48%;
+      height: 50px;
+    }
+  }
+
+  &__input {
+    resize: none;
+    box-shadow: none;
+    padding: 20px;
+    font-size: $font-size--small;
+    color: $main;
+    width: 100%;
+    border: 1px solid $main-lighter;
+    transition: 0.5s;
+    
+    &:focus {
+      border: 1px solid $primary;
+      outline: none;
+    }
+
+    &::placeholder {
+      color: $main-lighter;
+    }
+  }
+
+  &__button {
+    margin: 0 auto;
+  }
+
+  &__submit {
+    cursor: pointer;
+    padding: 0;
+    border: none;
+    background-color: $primary;
+    box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.35);  
+    text-decoration: none; 
+    color: $main-light;
+    font-size: $font-size--big;
+    width: 150px;
+    height: 40px;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: lighten($color: $primary, $amount: 5%);
+    }
+  }
+}
+
+.icon-mail {
+  height: 40px;
+  width: 40px;
+}
