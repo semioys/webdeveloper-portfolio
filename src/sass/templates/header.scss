@@ -1,0 +1,200 @@
+.header {
+  background-image: url("../img/header__background.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+
+  position: relative;
+  height: 100vh;
+
+  &__topbar {
+    padding: 40px 0;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__content {
+    color: $main;
+    text-align: center;
+    position: absolute;
+    width: 1140px;  // Container width
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+  }
+
+  &__subtitle {
+    margin: 0; 
+    margin-bottom: 46px; // 36 + line-height from title
+    font-size: $font-size--h2;
+    font-weight: 600;
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 55px; // 50 + line-height from title
+    font-size: $font-size--h1;
+    font-weight: 800;
+  }
+
+  &__desc {
+    font-size: $font-size--big;
+    margin: 0 auto;
+    width: 670px;
+    margin-bottom: 50px;
+  }
+
+  &__btns {
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    width: 380px;
+  }
+
+  &__contact {
+    display: block;
+    background-color: $primary;
+    box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.35);  
+    text-decoration: none; 
+    color: $main-light;
+    font-size: $font-size--big;
+    width: 165px;
+    height: 60px;
+    line-height: 60px; // To center element 
+    border-radius: 30px;
+
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: lighten($color: $primary, $amount: 5%);
+    }
+  }
+
+  &__work {
+    display: block;
+    background-color: $main-light;
+    box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.35);
+    font-size: $font-size--big;
+    text-decoration: none;
+    color: $main;
+    width: 165px;
+    height: 60px;
+    line-height: 60px; // To center element 
+    border-radius: 30px;
+
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: darken($color: $main-light, $amount: 5%);
+    }
+  }
+  
+}
+
+.logo {
+  width: 82px;
+  height: 30px;
+
+  &__icon {
+    width: 82px;
+    height: 30px;
+  }
+}
+
+.menu {
+  &__wrapper {
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+  &__item {
+    margin-left: 30px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+
+  &__link {
+    position: relative;
+    text-decoration: none;
+    font-size: $font-size;
+    color: $main;
+    transition: color 0.3s;
+
+    &:hover {
+      color: lighten($color: $main, $amount: 20%);
+    }
+
+    &--active:after {
+      position: absolute;
+      content: "";
+      display: block;
+
+      height: 2px;
+      background: $main-dark;
+      transition: width 0.3s;
+      width: 50%;
+    }
+  }
+}
+
+.scroll {
+  background-color: rgba(0,0,0,0.4);
+  box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.35);
+  display: block;
+  width: 25px;
+  height: 50px;
+  border-radius: 33px;
+  border: 2px solid #fff;
+  position: absolute;
+  bottom: 50px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  cursor: pointer;
+  transition: color 0.25s, border-color 0.25s, background-color 0.25s,
+    opacity 0.25s ease 0s;
+
+  &:before {
+    content: "";
+    display: block;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: $primary;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    transition: inherit;
+    animation: scroll 0.9s linear 0s normal none infinite running;
+  }
+
+  &:hover {
+    outline: none;
+    border-color: $primary;
+
+    &:before {
+      background-color: $primary;
+    }
+  }
+
+  // ANIMATION FOR SCROLL BTN
+  @keyframes scroll {
+    0% {
+      top: 2px;
+    }
+    100% {
+      top: 17px;
+    }
+  }
+}
