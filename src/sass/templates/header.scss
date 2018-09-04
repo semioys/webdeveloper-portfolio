@@ -99,19 +99,28 @@
 }
 
 .logo {
-  width: 82px;
-  height: 30px;
 
-  &__icon {
-    width: 82px;
-    height: 30px;
+
+  &__text {
+    color: $main;
+    margin: 0;
+    font-size: $font-size--h2;
+    font-weight: 400;
   }
+
+  &__accent {
+    color: $primary;
+    font-weight: 500;
+  }
+  
 }
 
 .menu {
   &__wrapper {
     display: flex;
     flex-flow: row wrap;
+    margin: 0;
+    padding: 0;
   }
 
   &__item {

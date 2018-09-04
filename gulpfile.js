@@ -80,7 +80,7 @@ gulp.task('svg', function() {
     }))
     .pipe(plugins.cheerio({
       run: function($) {
-        // $('[fill]').removeAttr('fill');
+        $('[fill]').removeAttr('fill');
         $('[stroke]').removeAttr('stroke');
         $('[style]').removeAttr('style');
       },
