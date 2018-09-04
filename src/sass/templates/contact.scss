@@ -61,7 +61,20 @@
       &:hover {
         color: lighten($color: $main-lighter, $amount: 20%);
       }
+    } 
+    position: relative;
+
+    &:before {
+      content: "";
+      width: 1px;
+      height: 40px;
+      background-color: $primary;
+      left: -15px;
+      position: absolute;
+      display: block;
+      top: 5px;
     }
+
   }
 
   &__form {
