@@ -60,5 +60,6 @@
   &__desc {
     margin: 0;
     width: 90%;
+    max-width: 360px; // FOR IE11
   }
 }
