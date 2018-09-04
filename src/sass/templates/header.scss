@@ -24,9 +24,14 @@
     text-align: center;
     position: absolute;
     width: 1140px;  // Container width
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(0,-50%);
+    height: 320px; // Random number for IE11
+    margin: auto;
+    height: 135px;
+    top: 0; // Random number for IE11
+    right: 0;
+    bottom: 0;
+    left: 0;
   }
 
   &__subtitle {
@@ -46,7 +51,7 @@
   &__desc {
     font-size: $font-size--big;
     margin: 0 auto;
-    width: 670px;
+    width: 672px;
     margin-bottom: 50px;
   }
 

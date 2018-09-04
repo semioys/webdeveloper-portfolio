@@ -11,11 +11,15 @@
   &__content {
     color: $main-light;
     text-align: center;
+    width: 1170px;
+    transform: translate(0,-50%);
+    margin: auto;
+    height: 135px;
     position: absolute;
-    width: 1140px;  // Container width
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%,-50%);
+    top: 50%; // Random number for IE11
+    right: 0;
+    bottom: 0;
+    left: 0;
   }
 
   &__title {
@@ -35,7 +39,7 @@
     font-size: $font-size--big;
     width: 170px;
     height: 47px;
-    line-height: 44px; // To center element 
+    line-height: 45px; // To center element 
     border-radius: 23.5px;
 
     transition: background-color 0.3s;
