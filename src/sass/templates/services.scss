@@ -31,6 +31,10 @@
 
     @media screen and (max-width: 798px) {
       width: 100%;
+
+      @media screen and (max-width: 606px) {
+        margin-bottom: 30px;
+      }
     }
   }
 
@@ -38,6 +42,12 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
+
+    @media screen and (max-width: 606px) {
+      flex-flow: row column;
+      justify-content: center;
+      align-items: center;
+    }
   }
 }
 

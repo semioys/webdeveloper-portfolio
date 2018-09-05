@@ -31,7 +31,7 @@
   $(window).on("scroll", function() {
     var bodyScroll = $(window).scrollTop();
 
-    if (bodyScroll > 1500) {
+    if (bodyScroll > 1700) {
       $("#bar1").barfiller({
         barColor: '#1abc9c',
         // duration in ms

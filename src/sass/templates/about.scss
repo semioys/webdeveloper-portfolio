@@ -14,10 +14,6 @@
       }
     }
   }
-  
-
-
-
 
   &__inner {
     display: flex;
@@ -36,6 +32,10 @@
           justify-content: center;
           align-items: center;
           max-width: 100%;
+
+          @media screen and (max-width: 606px) {
+            margin-bottom: 50px;
+          }
         }
       }
     }
@@ -77,6 +77,11 @@
 
         @media screen and (max-width: 798px) {
           margin-bottom: 20px;
+
+          @media screen and (max-width: 606px) {
+            width: 320px;
+            text-align: center;
+          }
         }
       }
     }
@@ -131,6 +136,11 @@
 
     @media screen and (max-width: 1022px) {
       margin-bottom: 15px;
+
+      @media screen and (max-width: 606px) {
+        width: 170px;
+        text-align: center;
+      }
     }
   }
 
@@ -186,6 +196,10 @@
         
         @media screen and (max-width: 798px) {
           max-width: 100%;
+
+          @media screen and (max-width: 606px) {
+            max-width: 300px;
+          }
         }
       }
     }
@@ -204,6 +218,10 @@
 
       @media screen and (max-width: 798px) {
         flex-flow: row wrap;
+
+        @media screen and (max-width: 606px) {
+          flex-flow: column wrap;
+        }
       }
     }
 
@@ -214,6 +232,10 @@
 
       @media screen and (max-width: 1022px) {
         font-size: ($font-size - rem(1px));
+
+        @media screen and (max-width: 606px) {
+          width: 100%;
+        }
       }
     }
 
@@ -233,6 +255,10 @@
           @media screen and (max-width: 798px) {
             width: auto;
             margin-left: 15px;
+
+            @media screen and (max-width: 606px) {
+              margin-left: 0;
+            }
           }
         }
       }
@@ -250,6 +276,10 @@
 
         @media screen and (max-width: 798px) {
           margin-left: 30px;
+
+          @media screen and (max-width: 606px) {
+            margin-left: 0;
+          }
         }
       }
     }
@@ -298,13 +328,26 @@
     flex-flow: row wrap;
     justify-content: space-between;
 
+    @media screen and (max-width: 606px) {
+      width: 100%;
+    }
+
   }
 
   &__skill {
     width: 48%;
 
+    @media screen and (max-width: 606px) {
+      width: 99%;
+      margin-bottom: 5px;
+    }
+
     &:nth-child(-n+2) {
       margin-bottom: 25px;
+
+      @media screen and (max-width: 606px) {
+        margin-bottom: 5px;
+      }
     }
 
   }

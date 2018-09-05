@@ -5,7 +5,8 @@
   background-attachment: fixed;
   background-size: cover;
   position: relative;
-
+  transform:translatez(0);
+  -webkit-transform:translatez(0);
   height: 300px;
 
   @media screen and (max-width: 1200px) {
@@ -38,16 +39,24 @@
     @media screen and (max-width: 1200px) {
       width: 992px;
       top: 75%; // Random number for IE11
+
+      @media screen and (max-width: 1022px) {
+        width: 768px;
+  
+        @media screen and (max-width: 798px) {
+          top: 80%;
+          width: 576px;
+    
+          @media screen and (max-width: 606px) {
+            width: 320px;
+          }
+        }
+      }
     }
 
-    @media screen and (max-width: 1022px) {
-      width: 768px;
-    }
 
-    @media screen and (max-width: 798px) {
-      top: 80%;
-      width: 576px;
-    }
+
+
 
   
   }
@@ -63,6 +72,13 @@
 
     @media screen and (max-width: 798px) {
       font-size: ($font-size--h2 - rem(5px));
+
+      @media screen and (max-width: 606px) {
+        margin: 0 auto;
+        margin-bottom: 20px;
+        width: 80%;
+        font-size: ($font-size--h2 - rem(12px));
+      }
     }
   }
 
@@ -80,6 +96,13 @@
     border-radius: 23.5px;
 
     transition: background-color 0.3s;
+
+    @media screen and (max-width: 606px) {
+      width: 130px;
+      height: 40px;
+      line-height: 41px;
+      font-size: ($font-size--big - 20%);
+    }
 
     &:hover {
       background-color: lighten($color: $primary, $amount: 5%);
