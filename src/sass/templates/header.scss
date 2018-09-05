@@ -41,6 +41,17 @@
     right: 0;
     bottom: 0;
     left: 0;
+
+    @media screen and (max-width: 1200px) {
+      width: 992px;
+    }
+    @media screen and (max-width: 1022px) {
+      width: 768px;
+    }  
+
+    @media screen and (max-width: 798px) {
+      width: 576px;
+    }
   }
 
   &__subtitle {
@@ -48,6 +59,16 @@
     margin-bottom: 46px; // 36 + line-height from title
     font-size: $font-size--h2;
     font-weight: 600;
+
+    @media screen and (max-width: 1022px) {
+      font-size: ($font-size--h2 - rem(5px));
+      margin-bottom: 40px;
+    }
+
+    @media screen and (max-width: 798px) {
+      margin-bottom: 20px;
+      font-size: ($font-size--h2 - rem(7px));
+    }
   }
 
   &__title {
@@ -55,6 +76,15 @@
     margin-bottom: 55px; // 50 + line-height from title
     font-size: $font-size--h1;
     font-weight: 800;
+    @media screen and (max-width: 1022px) {
+      font-size: ($font-size--h1 - rem(5px));
+    }
+
+    @media screen and (max-width: 798px) {
+      margin-bottom: 20px;
+      line-height: 50px;
+      font-size: ($font-size--h1 - rem(15px));
+    }
   }
 
   &__desc {
@@ -62,6 +92,16 @@
     margin: 0 auto;
     width: 672px;
     margin-bottom: 50px;
+    
+    @media screen and (max-width: 1022px) {
+      font-size: ($font-size--big - 10%);
+
+      @media screen and (max-width: 798px) {
+        width: 576px;
+        font-size: ($font-size--big - 10%);
+      }
+    }
+
   }
 
   &__btns {
@@ -193,6 +233,11 @@
       outline: none;
       border: none;
     }
+  }
+
+  
+  @media screen and (max-width: 798px) {
+    display: none;
   }
 }
 

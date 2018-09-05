@@ -2,10 +2,29 @@
   padding: 100px 0;
   background-color: $main-more-lighter;
   color: $main;
+  @media screen and (max-width: 1200px) {
+    padding: 80px 0;
+  }
+
+  @media screen and (max-width: 1022px) {
+    padding: 70px 0;
+  }
+
+  @media screen and (max-width: 798px) {
+    padding: 50px 0;
+  }
 
   &__inner {
     text-align: center;
     margin-bottom: 70px;
+
+    @media screen and (max-width: 1200px) {
+      margin-bottom: 60px;
+
+      @media screen and (max-width: 798px) {
+        margin-bottom: 40px;
+      } 
+    }
   }
 
   &__title {
@@ -20,12 +39,20 @@
     margin: 0;
     font-size: $font-size--big;
     margin-bottom: 70px;
+
+    @media screen and (max-width: 1200px) {
+      margin-bottom: 40px;
+    }
   }
 
   &__icon {
     width: 36px;
     height: 36px;
-    fill: $primary
+    fill: $primary;
+    @media screen and (max-width: 798px) {
+      width: 22px;
+      height: 22px;
+    } 
   }
 
   &__list {
@@ -48,6 +75,10 @@
     font-size: $font-size--small;
     text-align: left;
     margin-left: 30px;
+
+    @media screen and (max-width: 798px) {
+      margin-left: 20px;
+    } 
 
     &__title {
       margin: 0;
@@ -73,6 +104,13 @@
       position: absolute;
       display: block;
       top: 5px;
+
+      @media screen and (max-width: 798px) {
+        height: 30px;
+        background-color: $primary;
+        left: -10px;
+        top: 7px;
+      } 
     }
 
   }
@@ -88,9 +126,20 @@
     width: 100%;
     margin-bottom: 50px;
 
+    @media screen and (max-width: 798px) {
+      margin-bottom: 30px;
+    } 
+
     &--half {
       width: 48%;
       height: 50px;
+
+      @media screen and (max-width: 798px) {
+        height: 50px;
+        input {
+          height: 50px;
+        }
+      } 
     }
   }
 
@@ -140,4 +189,9 @@
 .icon-mail {
   height: 40px;
   width: 40px;
+
+  @media screen and (max-width: 798px) {
+    height: 26px;
+    width: 26px;
+  } 
 }

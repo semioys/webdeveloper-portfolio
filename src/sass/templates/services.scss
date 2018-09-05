@@ -3,6 +3,19 @@
   text-align: center;
   color: $main;
 
+  @media screen and (max-width: 1200px) {
+    padding: 80px 0;
+
+    @media screen and (max-width: 1022px) {
+      padding: 70px 0;
+      
+      @media screen and (max-width: 798px) {
+        padding-top: 50px;
+        padding-bottom: 30px; // MARGIN OF BOTTOM ELEMENTS
+      }
+    }
+  }
+
   &__title {
     margin: 0;
     margin-bottom: 25px;
@@ -15,6 +28,10 @@
     margin: 0 auto;
     margin-bottom: 80px;
     font-size: $font-size;
+
+    @media screen and (max-width: 798px) {
+      width: 100%;
+    }
   }
 
   &__wrapper {
@@ -35,6 +52,20 @@
   text-align: center;
   transition: 0.3s;
 
+  @media screen and (max-width: 1200px) {
+    max-width: 300px;
+    padding: 30px 0;
+    @media screen and (max-width: 1022px) {
+      max-width: 230px; // FOR IE11
+      padding: 20px 0;
+      @media screen and (max-width: 798px) {
+        max-width: 260px; // FOR IE11
+        padding: 25px 0;
+      }
+    }
+  }
+  
+
   &:hover {
     transform: translateY(-8px);
     box-shadow: 0px 9px 15px 0px rgba(0, 0, 0, 0.1);
@@ -42,6 +73,16 @@
 
   &:nth-child(-n+3) {
     margin-bottom: 60px;
+
+    @media screen and (max-width: 1022px) {
+      margin-bottom: 40px;
+      @media screen and (max-width: 798px) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+  @media screen and (max-width: 798px) {
+    margin-bottom: 20px;
   }
 
   &__img {
@@ -49,17 +90,44 @@
     height: 60px;
     margin-bottom: 30px;
     fill: $primary;
+
+    @media screen and (max-width: 1022px) {
+      margin-bottom: 20px;
+    }
   }
 
   &__title {
     font-size: $font-size--h4;
     margin: 0;
     margin-bottom: 25px;
+
+    @media screen and (max-width: 1022px) {
+      margin-bottom: 15px;
+
+      @media screen and (max-width: 798px) {
+        margin-bottom: 10px;
+      }
+    }
+
+
   }
 
   &__desc {
     margin: 0;
     width: 90%;
     max-width: 360px; // FOR IE11
+
+    @media screen and (max-width: 1200px) {
+      max-width: 300px; // FOR IE11
+
+      @media screen and (max-width: 1022px) {
+        max-width: 230px; // FOR IE11
+        font-size: ($font-size - rem(2px));
+
+          @media screen and (max-width: 798px) {
+            max-width: 260px; // FOR IE11
+        }
+      }
+    }
   }
 }

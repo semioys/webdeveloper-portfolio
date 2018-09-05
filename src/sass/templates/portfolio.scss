@@ -2,6 +2,17 @@
   padding: 100px 0;
   color: $main;
 
+  @media screen and (max-width: 1200px) {
+    padding: 80px 0;
+
+    @media screen and (max-width: 1022px) {
+      padding: 70px 0;
+      
+      @media screen and (max-width: 798px) {
+        padding: 50px 0;
+      }
+    }
+  }
 
   &__text {
     text-align: center;
@@ -25,6 +36,11 @@
     flex-flow: row wrap;
     justify-content: space-between;
     align-items: center;
+
+    @media screen and (max-width: 1200px) {
+      justify-content: center;
+
+    }
   }
 
   &__item {
@@ -41,11 +57,44 @@
         opacity: 1;
       }
     }
+
+    @media screen and (max-width: 1200px) {
+      height: 320px;
+      width: 320px;
+
+      @media screen and (max-width: 1022px) {
+        height: 240px;
+        width: 240px;
+
+        @media screen and (max-width: 798px) {
+          height: 270px;
+          width: 270px;
+        }
+      }
+    }
+
   }
 
   &__img {
     height: 380px;
     width: 380px;
+
+    @media screen and (max-width: 1200px) {
+      height: 320px;
+      width: 320px;
+
+      @media screen and (max-width: 1022px) {
+        height: 240px;
+        width: 240px;
+
+        @media screen and (max-width: 798px) {
+          height: 270px;
+          width: 270px;
+        }
+      }
+    }
+
+
   }
 
   &__overlay {

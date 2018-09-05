@@ -3,11 +3,44 @@
   background-color: $main-more-lighter;
   color: $main;
 
+  @media screen and (max-width: 1200px) {
+    padding: 80px 0;
+
+    @media screen and (max-width: 1022px) {
+      padding: 70px 0;
+
+      @media screen and (max-width: 798px) {
+        padding: 50px 0;
+      }
+    }
+  }
+  
+
+
+
+
   &__inner {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
     margin-bottom: 100px;
+
+    @media screen and (max-width: 1200px) {
+      margin-bottom: 80px;
+
+      @media screen and (max-width: 1200px) {
+        margin-bottom: 70px;
+
+        @media screen and (max-width: 798px) {
+          flex-flow: column wrap;
+          justify-content: center;
+          align-items: center;
+          max-width: 100%;
+        }
+      }
+    }
+
+
   }
 
   &__left {
@@ -29,6 +62,23 @@
       background-position: left top, left bottom, left top, right top;
       background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
       background-size: 33px 4px, 33px 4px, 4px 33px, 4px 33px;
+
+      @media screen and (max-width: 1200px) {
+        display: none;
+      }
+    }
+
+    @media screen and (max-width: 1200px) {
+      padding: 0;
+      max-width: 350px;
+
+      @media screen and (max-width: 1022px) {
+        max-width: 280px;
+
+        @media screen and (max-width: 798px) {
+          margin-bottom: 20px;
+        }
+      }
     }
   }
 
@@ -36,10 +86,33 @@
     position: relative;
     z-index: 2;
 
+    @media screen and (max-width: 1200px) {
+      max-width: 350px;
+
+      @media screen and (max-width: 1022px) {
+        max-width: 280px;
+      }
+    }
   }
 
   &__right {
     max-width: 650px;
+
+    @media screen and (max-width: 1200px) {
+      max-width: 570px;
+
+      @media screen and (max-width: 1022px) {
+        max-width: 430px;
+        
+        @media screen and (max-width: 798px) {
+          display: flex;
+          flex-flow: column wrap;
+          justify-content: center;
+          align-items: center;
+          max-width: 100%;
+        }
+      }
+    }
   }
 
   &__title {
@@ -55,6 +128,10 @@
     color: $primary;
     margin: 0;
     margin-bottom: 30px;
+
+    @media screen and (max-width: 1022px) {
+      margin-bottom: 15px;
+    }
   }
 
   &__desc {
@@ -64,8 +141,33 @@
     margin-top: 0;
     max-width: 650px; // FOR IE 11
 
+    @media screen and (max-width: 1200px) {
+      max-width: 570px;
+
+      @media screen and (max-width: 1022px) {
+        max-width: 430px;
+        font-size: ($font-size - rem(1px));
+        
+        @media screen and (max-width: 798px) {
+          max-width: 100%;
+        }
+      }
+    }
+
     &:nth-of-type(3) {
       margin-bottom: 60px;
+
+      @media screen and (max-width: 1200px) {
+        margin-bottom: 40px;
+
+        @media screen and (max-width: 1022px) {
+          margin-bottom: 20px;
+  
+          @media screen and (max-width: 798px) {
+            margin-bottom: 40px;
+          }
+        }
+      }
     }
   }
 
@@ -75,6 +177,19 @@
     justify-content: space-between;
     margin-bottom: 40px;
     max-width: 650px; //FOR IE11
+
+    @media screen and (max-width: 1200px) {
+      max-width: 570px;
+
+      @media screen and (max-width: 1022px) {
+        max-width: 430px;
+        
+        @media screen and (max-width: 798px) {
+          max-width: 100%;
+        }
+      }
+    }
+ 
   }
 
   &__contact {
@@ -84,10 +199,22 @@
     justify-content: space-between;
     align-items: center;
 
+    @media screen and (max-width: 1022px) {
+      flex-flow: column wrap;
+
+      @media screen and (max-width: 798px) {
+        flex-flow: row wrap;
+      }
+    }
+
     &__title {
       margin: 0;
       font-size: $font-size;
       font-weight: 600;
+
+      @media screen and (max-width: 1022px) {
+        font-size: ($font-size - rem(1px));
+      }
     }
 
     &__desc {
@@ -96,6 +223,21 @@
       font-size: $font-size;
       color: $main;
 
+      @media screen and (max-width: 1022px) {
+        width: 100%;
+        margin-left: 0;
+
+        @media screen and (max-width: 1022px) {
+          font-size: ($font-size - rem(1px));
+
+          @media screen and (max-width: 798px) {
+            width: auto;
+            margin-left: 15px;
+          }
+        }
+      }
+
+
       &:hover {
         color: lighten($color: $main, $amount: 20%);
       }
@@ -103,6 +245,13 @@
 
     &__phone {
       margin-left: 34px;
+      @media screen and (max-width: 1022px) {
+        margin-left: 0;
+
+        @media screen and (max-width: 798px) {
+          margin-left: 30px;
+        }
+      }
     }
 
     &__wrapper {
@@ -112,6 +261,7 @@
       align-items: center;
 
       margin-bottom: 15px;
+      
 
       &:last-child {
         margin-bottom: 0;
@@ -139,6 +289,8 @@
       background-color: $main;
       color: $main-light;
     }
+
+    
   }
 
   &__skills {

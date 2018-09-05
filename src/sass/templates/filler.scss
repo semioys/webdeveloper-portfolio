@@ -8,6 +8,20 @@
 
   height: 300px;
 
+  @media screen and (max-width: 1200px) {
+    height: 230px;
+  }
+
+  @media screen and (max-width: 1022px) {
+    height: 230px;
+  }
+
+  @media screen and (max-width: 798px) {
+    height: 210px;
+  }
+
+  
+
   &__content {
     color: $main-light;
     text-align: center;
@@ -20,6 +34,22 @@
     right: 0;
     bottom: 0;
     left: 0;
+
+    @media screen and (max-width: 1200px) {
+      width: 992px;
+      top: 75%; // Random number for IE11
+    }
+
+    @media screen and (max-width: 1022px) {
+      width: 768px;
+    }
+
+    @media screen and (max-width: 798px) {
+      top: 80%;
+      width: 576px;
+    }
+
+  
   }
 
   &__title {
@@ -27,6 +57,13 @@
     font-size: $font-size--h2;
     font-weight: 800;
     margin-bottom: 50px;
+    @media screen and (max-width: 1200px) {
+      margin-bottom: 30px;
+    }
+
+    @media screen and (max-width: 798px) {
+      font-size: ($font-size--h2 - rem(5px));
+    }
   }
 
   &__btn {
