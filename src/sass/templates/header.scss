@@ -397,10 +397,24 @@
   }
 }
 
+// FOR MOBILE NAVIGATION
+.active {
+  padding-bottom: 10px;
+
+  &--toWhite {
+    z-index: 100;
+    background-size:cover;
+    background-color: #fff;
+    padding-bottom: 0;
+  }
+
+  &--mobile {
+    display: none;
+    opacity: 0;
+  }
+}
 
 .hamburger {
-
-
   &__icon {
     width: 31px;
     height: 31px;
@@ -409,24 +423,5 @@
     @media screen and (max-width: 798px) {
       display: block;
     }
-  }
-}
-
-.active {
-  padding-bottom: 10px;
-  
-  
-  &--toWhite {
-    z-index: 100;
-    // min-height: 100%;
-    background-size:cover;
-    background-color: #fff;
-    padding-bottom: 0;
-  }
-
-  &--mobile {
-    
-    display: none;
-    opacity: 0;
   }
 }
