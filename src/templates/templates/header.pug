@@ -1,5 +1,5 @@
 header.header(data-scroll-index="0")
-  .header__topbar
+  .header__topbar.active
     .container
       .header__wrapper
         .logo
@@ -17,6 +17,19 @@ header.header(data-scroll-index="0")
               a.menu__link(href="#" data-scroll-nav="3") PORTFOLIO
             li.menu__item
               a.menu__link(href="#" data-scroll-nav="4") CONTACT
+        +icon('hamburger','hamburger__icon')
+    .menu--mobile.active--mobile
+      ul.menu__wrapper
+        li.menu__item.menu__item--mobile
+          a.menu__link.menu__link--active(href="#" data-scroll-nav="0") HOME
+        li.menu__item.menu__item--mobile
+          a.menu__link(href="#" data-scroll-nav="1") WHAT I DO
+        li.menu__item.menu__item--mobile
+          a.menu__link(href="#" data-scroll-nav="2") ABOUT ME
+        li.menu__item.menu__item--mobile
+          a.menu__link(href="#" data-scroll-nav="3") PORTFOLIO
+        li.menu__item.menu__item--mobile
+          a.menu__link(href="#" data-scroll-nav="4") CONTACT
   .container
     .header__content
       .header__text

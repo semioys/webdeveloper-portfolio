@@ -1,3 +1,25 @@
+$(document).ready(function() {
+  $(".hamburger__icon").click(function(e) {
+    $(".menu--mobile").toggleClass("active--mobile");
+    $(".header__topbar").toggleClass("active");
+    $(".header__topbar").toggleClass("active--toWhite");
+    e.preventDefault();
+  });
+});
+
+$(document).ready(function() {
+  $(".menu__item--mobile").click(function(e) {
+    if ($(e.target).hasClass("menu__link")) {
+      $(".menu--mobile").toggleClass("active--mobile");
+      $(".header__topbar").toggleClass("active");
+    }
+    e.preventDefault();
+  });
+});
+
+
+
+
 (function() {
   // SCROLLIT
   $.scrollIt({

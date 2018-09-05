@@ -18,6 +18,11 @@
     width: 100%;
     padding: 20px 0;
     transition: all 0.5s ease;
+    @media screen and (max-width: 798px) {
+      padding-bottom: 0;
+      padding: 10px 0;
+    }
+    
   }
 
   &__fixed-top {
@@ -25,6 +30,10 @@
     z-index: 999;
     background-color: $main-light;
     box-shadow: 0px 0px 18px 1px rgba(0, 0, 0, 0.1);
+    @media screen and (max-width: 798px) {
+      padding: 10px 0;
+      padding-bottom: 0;
+    }
   }
 
   &__wrapper {
@@ -32,6 +41,8 @@
     flex-flow: row wrap;
     align-items: center;
     justify-content: space-between;
+
+    
   }
   
   &__content {
@@ -47,7 +58,7 @@
     right: 0;
     bottom: 0;
     left: 0;
-
+    
     @media screen and (max-width: 1200px) {
       width: 992px;
 
@@ -222,6 +233,10 @@
 }
 
 .menu {
+
+  @media screen and (max-width: 798px) {
+    display: none;
+  }
   &__wrapper {
     display: flex;
     flex-flow: row wrap;
@@ -290,6 +305,39 @@
   @media screen and (max-width: 798px) {
     display: none;
   }
+
+
+  &--mobile {
+    display: none;
+    opacity: 1;
+    transition: 0.3s all;
+
+    @media screen and (max-width: 798px) {
+      width: 100%;
+      position: relative;
+      display: block;
+      background-color: $main-light;
+      z-index: 999;
+    }
+
+    .menu__wrapper {
+      flex-flow: column wrap;
+      justify-content: center;
+      align-items: center;
+      padding: 20px 0;
+    }
+
+    .menu__item {
+      margin-left: 0;
+      margin-bottom: 20px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+    }
+
+  }
 }
 
 .scroll {
@@ -346,5 +394,39 @@
     100% {
       top: 17px;
     }
+  }
+}
+
+
+.hamburger {
+
+
+  &__icon {
+    width: 31px;
+    height: 31px;
+    cursor: pointer;
+    display: none;
+    @media screen and (max-width: 798px) {
+      display: block;
+    }
+  }
+}
+
+.active {
+  padding-bottom: 10px;
+  
+  
+  &--toWhite {
+    z-index: 100;
+    // min-height: 100%;
+    background-size:cover;
+    background-color: #fff;
+    padding-bottom: 0;
+  }
+
+  &--mobile {
+    
+    display: none;
+    opacity: 0;
   }
 }
