@@ -1,5 +1,5 @@
 .filler {
-  background-image: url("../img/filler__background.png");
+  background-image: url("../img/filler__background--mobile.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-attachment: fixed;
@@ -8,18 +8,22 @@
   transform:translatez(0);
   -webkit-transform:translatez(0);
   height: 300px;
+  will-change : transform;
 
   @media screen and (max-width: 1200px) {
     height: 230px;
+    @media screen and (max-width: 1022px) {
+      height: 230px;
+      @media screen and (max-width: 798px) {
+        height: 210px;
+      }
+    }
   }
 
-  @media screen and (max-width: 1022px) {
-    height: 230px;
-  }
 
-  @media screen and (max-width: 798px) {
-    height: 210px;
-  }
+
+
+
 
   
 
