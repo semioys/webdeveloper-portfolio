@@ -39,8 +39,6 @@
         }
       }
     }
-
-
   }
 
   &__left {
@@ -263,7 +261,6 @@
         }
       }
 
-
       &:hover {
         color: lighten($color: $main, $amount: 20%);
       }
@@ -318,9 +315,7 @@
     &:hover {
       background-color: $main;
       color: $main-light;
-    }
-
-    
+    }  
   }
 
   &__skills {
@@ -331,7 +326,6 @@
     @media screen and (max-width: 606px) {
       width: 100%;
     }
-
   }
 
   &__skill {
@@ -349,7 +343,6 @@
         margin-bottom: 5px;
       }
     }
-
   }
 
   &__barname {
@@ -357,8 +350,6 @@
     font-size: $font-size;
     font-weight: 600;
   }
-
-
 }
 
 
