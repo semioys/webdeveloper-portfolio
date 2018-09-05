@@ -25,6 +25,7 @@
 
   &__desc {
     width: 80%;
+    width: 655px;
     margin: 0 auto;
     margin-bottom: 80px;
     font-size: $font-size;
@@ -57,7 +58,7 @@
   display: flex;
   flex-flow: column wrap;
   padding: 60px 0;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   text-align: center;
   transition: 0.3s;
